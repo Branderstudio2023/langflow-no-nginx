@@ -1,15 +1,15 @@
-# fly.toml app configuration file generated for langflow-no-nginx on 2025-05-19T08:09:55Z
+# fly.toml app configuration file generated for langflow-no-nginx on 2025-05-19T08:22:44Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'langflow-no-nginx'
-primary_region = 'sin'
+primary_region = 'syd'
 
 [build]
 
 [http_service]
-  internal_port = 8080
+  internal_port = 7860
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
