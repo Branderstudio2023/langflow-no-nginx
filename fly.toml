@@ -1,23 +1,23 @@
-# fly.toml app configuration file generated for langflow-no-nginx on 2025-05-19T08:22:44Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
+# fly.toml for persistent Langflow deployment
 
-app = 'langflow-no-nginx'
-primary_region = 'syd'
+app = "langflow-no-nginx"
+primary_region = "syd"
 
 [build]
 
 [http_service]
   internal_port = 7860
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = "disabled"
   auto_start_machines = true
-  min_machines_running = 0
-  processes = ['app']
+  min_machines_running = 1
+  processes = ["app"]
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
+  memory = "1gb"
+  cpu_kind = "shared"
   cpus = 2
-  memory_mb = 4096
+
+[mounts]
+  source = "langflow_data"
+  destination = "/code"
