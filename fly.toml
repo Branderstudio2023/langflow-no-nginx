@@ -1,7 +1,7 @@
 # fly.toml for persistent Langflow deployment
 
 app = "langflow-no-nginx"
-primary_region = "syd"
+primary_region = "sin"
 
 [build]
 
@@ -14,7 +14,7 @@ primary_region = "syd"
   processes = ["app"]
 
 [[vm]]
-  memory = "1gb"
+  memory = "4gb"
   cpu_kind = "shared"
   cpus = 2
 
