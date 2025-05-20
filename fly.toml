@@ -1,7 +1,10 @@
-# fly.toml for persistent Langflow deployment
+# fly.toml app configuration file generated for langflow-no-nginx-273xcq on 2025-05-20T18:18:04Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "langflow-no-nginx"
-primary_region = "sin"
+app = 'langflow-no-nginx-273xcq'
+primary_region = 'sin'
 
 [build]
 
@@ -11,13 +14,10 @@ primary_region = "sin"
   auto_stop_machines = false
   auto_start_machines = true
   min_machines_running = 1
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
-  memory = "4gb"
-  cpu_kind = "shared"
+  memory = '4gb'
+  cpu_kind = 'shared'
   cpus = 2
-
-[mounts]
-  source = "langflow_data"
-  destination = "/code"
+  memory_mb = 4096
