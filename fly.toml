@@ -23,5 +23,5 @@ primary_region = 'sin'
   memory_mb = 4096
 
 [mounts]
-  source = "vol_r1owwg58ez76lo34"
+  source = "langflow_data"
   destination = "/code"
